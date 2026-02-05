@@ -1,0 +1,48 @@
+table, th, td {
+  border: 1px solid black;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
+}
+
+ th, td {
+  border-color: #96D4D4;
+}
+
+th, td {
+  padding: 15px;  
+}
+/* Cell padding is the space between the cell edges and the cell content. */
+
+th, td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+/* To style every other table row element, use the :nth-child(even) selector like this: */
+
+tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+/* Use an rgba() color to specify the transparency of the color: */
+
+
