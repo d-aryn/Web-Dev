@@ -34,14 +34,13 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .textbox .logo {
-    font-size: 3.Srem;
+    font-size: 3rem;
     color: #1877f2;
 }
 
 .textbox p{
-    font-size: 1.2 rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 5rem;
     max-width: 400px;
