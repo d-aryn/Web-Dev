@@ -1,0 +1,18 @@
+<section class="product-list">
+  <h1 class="product-list__title">Товары категории</h1>
+
+  @if (hasProducts) {
+    <div class="product-list__grid">
+      @for (product of products; track product.id) {
+        <app-product-card
+          [product]="product"
+          (delete)="handleDelete($event)"
+        />
+      }
+    </div>
+  } @else {
+    <p class="product-list__empty">
+      В этой категории пока нет товаров. Попробуйте выбрать другую категорию.
+    </p>
+  }
+</section>
