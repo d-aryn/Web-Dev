@@ -1,0 +1,27 @@
+<div class="detail">
+  @if (loading()) {
+    <p class="loading">Loading…</p>
+  } @else if (album(); as a) {
+    <h1>Album #{{ a.id }}</h1>
+    <p class="meta">User ID: {{ a.userId }}</p>
+    <div class="edit">
+      <label for="title">Title</label>
+      <input
+        id="title"
+        type="text"
+        [ngModel]="editTitle()"
+        (ngModelChange)="editTitle.set($event)"
+        class="input"
+      />
+      <button type="button" class="btn-save" (click)="onSave()" [disabled]="saving()">
+        {{ saving() ? 'Saving…' : 'Save' }}
+      </button>
+    </div>
+    <div class="actions">
+      <a [routerLink]="['/albums', a.id, 'photos']" class="btn">View Photos</a>
+      <a routerLink="/albums" class="btn btn-back">Back</a>
+    </div>
+  } @else {
+    <p class="empty">Album not found.</p>
+  }
+</div>

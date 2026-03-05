@@ -1,0 +1,20 @@
+<div class="albums">
+  <h1>Albums</h1>
+  @if (loading()) {
+    <p class="loading">Loading albums…</p>
+  } @else if (albums().length === 0) {
+    <p class="empty">No albums to show.</p>
+  } @else {
+    <ul class="list">
+      @for (album of albums(); track album.id) {
+        <li>
+          <a [routerLink]="['/albums', album.id]" class="item">
+            <span class="id">#{{ album.id }}</span>
+            <span class="title">{{ album.title }}</span>
+          </a>
+          <button type="button" class="btn-delete" (click)="onDelete(album.id, $event)">Delete</button>
+        </li>
+      }
+    </ul>
+  }
+</div>

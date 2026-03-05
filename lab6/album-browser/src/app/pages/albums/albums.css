@@ -1,0 +1,67 @@
+.albums h1 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  color: #1a1a2e;
+}
+
+.loading,
+.empty {
+  color: #666;
+  margin-top: 1rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0f3460;
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+.item:hover {
+  text-decoration: underline;
+}
+
+.id {
+  font-weight: 600;
+  min-width: 2.5rem;
+  color: #666;
+}
+
+.title {
+  flex: 1;
+}
+
+.btn-delete {
+  padding: 0.35rem 0.75rem;
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.btn-delete:hover {
+  background: #a93226;
+}

@@ -1,0 +1,20 @@
+<div class="photos">
+  <h1>Album Photos</h1>
+  @if (loading()) {
+    <p class="loading">Loading photos…</p>
+  } @else if (photos().length === 0) {
+    <p class="empty">No photos in this album.</p>
+  } @else {
+    <div class="grid">
+      @for (photo of photos(); track photo.id) {
+        <figure class="card">
+          <img [src]="photo.thumbnailUrl" [alt]="photo.title" loading="lazy" />
+          <figcaption>{{ photo.title }}</figcaption>
+        </figure>
+      }
+    </div>
+  }
+  @if (albumId !== null) {
+    <a [routerLink]="['/albums', albumId]" class="btn-back">Back to Album</a>
+  }
+</div>
